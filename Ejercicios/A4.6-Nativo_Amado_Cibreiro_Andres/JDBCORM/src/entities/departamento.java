@@ -1,0 +1,33 @@
+package entities;
+
+public class departamento {
+    private int idDepto;
+    private String nomDepto;
+    private int idSede;
+
+    public departamento(){}
+
+    public int getIdDepto() {
+        return idDepto;
+    }
+
+    public void setIdDepto(int idDepto) {
+        this.idDepto = idDepto;
+    }
+
+    public String getNomDepto() {
+        return nomDepto;
+    }
+
+    public void setNomDepto(String nomDepto) {
+        this.nomDepto = nomDepto;
+    }
+
+    public int getIdSede() {
+        return idSede;
+    }
+
+    public void setIdSede(int idSede) {
+        this.idSede = idSede;
+    }
+}

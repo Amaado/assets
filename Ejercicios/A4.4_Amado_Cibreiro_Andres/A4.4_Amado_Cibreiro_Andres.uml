@@ -1,0 +1,44 @@
+@startuml
+class departamento {
+  + id_depto : int(11)
+  - nom_depto : char(32)
+  - id_sede : int(11)
+}
+
+class empleado {
+  + dni : char(9)
+  - nom_emp : char(40)
+  - id_depto : int(11)
+}
+
+class empleado_datos_prof {
+  + dni : char(9)
+  - categoria : char(2)
+  - sueldo_bruto_anual : decimal(8,2)
+}
+
+class proyecto {
+  + id_proy : int(11)
+  - f_inicio : date
+  - f_fin : date
+  - nom_proy : char(20)
+}
+
+class sede {
+  + id_sede : int(11)
+  - nom_sede : char(20)
+}
+
+class proyecto_sede {
+  + id_proy : int(11)
+  + id_sede : int(11)
+  - f_inicio : date
+  - f_fin : date
+}
+
+departamento --> sede : pertenece
+empleado --> departamento : trabaja_en
+empleado_datos_prof --> empleado : detalles
+proyecto_sede --> sede : ubicado_en
+proyecto_sede --> proyecto : relacionado_con
+@enduml

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.Proyecto" table="proyecto">
+        <id name="idProy" column="id_proy" type="int"></id>
+        <property name="fInicio" column="f_inicio" type="date" not-null="true"/>
+        <property name="fFin" column="f_fin" type="date" not-null="false"/>
+        <property name="nomProy" column="nom_proy" type="string" length="20" not-null="true"/>
+    </class>
+</hibernate-mapping>

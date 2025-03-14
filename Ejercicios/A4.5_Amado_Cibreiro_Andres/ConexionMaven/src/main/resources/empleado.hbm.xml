@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.EmpleadoDatosProf" table="empleado_datos_prof">
+        <id name="dni" column="dni" type="string" length="9"></id>
+        <property name="nomEmp" column="nom_emp" type="string" length="40" not-null="true"/>
+        <property name="idDepto" column="id_depto" type="int" not-null="true"/>
+    </class>
+</hibernate-mapping>
